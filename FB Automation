@@ -1,0 +1,17 @@
+# fb automation using selenium
+from selenium import webdriver
+import time
+
+driver = webdriver.Chrome('chromedriver.exe') # using chrome browser
+driver.get('https://www.facebook.com/') # enetring the URL of fb
+driver.maximize_window() # maximizing the chrome window
+
+time.sleep(1) # time delay
+
+# login
+driver.find_element_by_id('email').send_keys('raviranjansingh2cool2funky@gmail.com') # gmail id
+driver.find_element_by_id('pass').send_keys('logic123') # password
+driver.find_element_by_id('loginbutton').click() 
+
+driver.current_url()
+print('Done')
